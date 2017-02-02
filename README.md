@@ -7,7 +7,7 @@ With the growing need of IP addresses and IPv4 address exhuasting soon, people a
 Newly added emulcomm_ipv6 module and various IPv6 API function call added in the current extention 
 
 # IPv6 Testbed
-To test IPv6 functionality we will be using NorNet testbed. NorNet is wonderful platform which have many nodes having IPv6 capability. NorNet bascially consists of slices, these slices further contains various nodes which may or may not have IPv6 capability. One of the slice has "srl_seattle" which has many nodes which are IPv6 enbaled, choose one of the nodes to work on. 
+To test IPv6 functionality we will be using NorNet testbed. NorNet is wonderful platform which have many nodes having IPv6 capability. NorNet bascially consists of slices, these slices further contains various nodes which may or may not have IPv6 capability. One of the slice is "srl_seattle" which has many nodes having IPv6 capability, choose one of the nodes to work on. 
 
 ###SSH into NorNet
 1. First of all you need Secure Shell(SSH) access to the login server of the NorNet test bed. For this you need a gatekeeper NorNet Username and Password. Using your Username and Password SSH into login server with following command:
@@ -23,6 +23,7 @@ This forwards TCP port 2000 to PLC server's HTTPS port and forwards TCP port 200
 2. Access to PLC and Monitor is done via port forwarding:
 
 Monitor: (http://localhost:2001/)
+
 PLC: (https://localhost:2000/)
 
 After SSH into login server you can choose a slice & node using above PLC link with your gatekeeper username and password.
