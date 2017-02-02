@@ -14,17 +14,17 @@ To test IPv6 functionality we will be using NorNet testbed. NorNet is wonderful 
 
 ```ssh <username>@gatekeeper.nntb.no```
 
-Use port forwarding to access PLC and Monitor servers:
+  Use port forwarding to access PLC and Monitor servers:
 
 ```ssh <username>@gatekeeper.nntb.no -L 2000:plc.simula.nornet:443 -L 2001:monitor.simula.nornet:80```
 
-This forwards TCP port 2000 to PLC server's HTTPS port and forwards TCP port 2001 to Monitor server's HTTP port
+  This forwards TCP port 2000 to PLC server's HTTPS port and forwards TCP port 2001 to Monitor server's HTTP port
 
 2. Access to PLC and Monitor is done via port forwarding:
 
-Monitor: (http://localhost:2001/)
+Monitor: "http://localhost:2001/"
 
-PLC: (https://localhost:2000/)
+PLC: "https://localhost:2000/"
 
 After SSH into login server you can choose a slice & node using above PLC link with your gatekeeper username and password.
 
