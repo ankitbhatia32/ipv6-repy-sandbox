@@ -61,10 +61,12 @@ To test IPv6 Implementation make sure you have Python 2 and git installed on you
 ### Example
 In this example we will run our implementation to find the local IPv6 address of the NorNet node. Follow the following steps:
   1. Assuming after cloning the repository you have initialized and build the implementation. Now navigate to RUNNABLE directory. 
-  2. We will run r2py file 'localIPv6.r2py'. To run the file use the repy command as shown below
+  2. We will run r2py file 'localIPv6.r2py'. To run the file use the repy command as shown below:
+
       ```python repy.py restrictions.test localIPv6.r2py```
+      
   3. The complete procedure is shown as follow:
-  
+
 ```
 srl_seattle@solvang.simula.nornet $ git clone -b ipv6_sandbox_repy https://github.com/ankitbhatia32/repy_v2.git
 Cloning into 'repy_v2'...
