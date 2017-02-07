@@ -26,6 +26,7 @@ Send Part:
 srl_seattle@solvang.simula.nornet # python repy.py restrictions.test test1_send.r2py 
 5
 ```
+Here 5 represents the length of the message sent.
 
 Finally Listen Part looks like as follows:
 
