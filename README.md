@@ -61,41 +61,43 @@ To test IPv6 Implementation make sure you have Python 2 and git installed on you
 ### Example
 In this example we will run our implementation to find the local IPv6 address of the NorNet node. Follow the following steps:
   1. Assuming after cloning the repository you have initialized and build the implementation. Now navigate to RUNNABLE directory. 
-  2. We will run r2py file 'localIPv6.r2py'. To run the file use the repy command as shown below:
-    ```python repy.py restrictions.test localIPv6.r2py```
+  2. We will run r2py file 'localIPv6.r2py'. To run the file use the repy command as shown below
+      ```python repy.py restrictions.test localIPv6.r2py```
   3. The complete procedure is shown as follow:
-     ```
-     srl_seattle@solvang.simula.nornet $ git clone -b ipv6_sandbox_repy https://github.com/ankitbhatia32/repy_v2.git
-     Cloning into 'repy_v2'...
-     remote: Counting objects: 1918, done.
-     Receiving objects: 100% (1918/1918), 1.18 MiB | 273.00 KiB/s, done.
-     remote: Total 1918 (delta 0), reused 0 (delta 0), pack-reused 1918
-     Resolving deltas: 100% (999/999), done.
-     Checking connectivity... done.
-     srl_seattle@solvang.simula.nornet $ cd repy_v2/
-     srl_seattle@solvang.simula.nornet $ cd scripts/
-     srl_seattle@solvang.simula.nornet $ python initialize.py 
-     Checking out repo from https://github.com/SeattleTestbed/seattlelib_v2 ...
-     Done!
-     Checking out repo from https://github.com/SeattleTestbed/portability ...
-     Done!
-     Checking out repo from https://github.com/SeattleTestbed/seash ...
-     Done!
-     Checking out repo from https://github.com/SeattleTestbed/affix ...
-     Done!
-     Checking out repo from https://github.com/SeattleTestbed/common ...
-     Done!
-     Checking out repo from https://github.com/SeattleTestbed/utf ...
-     Done!
-     srl_seattle@solvang.simula.nornet $ python build.py 
-     Building into /home/srl_seattle/repy_v2/RUNNABLE
-     Done building!
-     srl_seattle@solvang.simula.nornet $ cd ..
-     srl_seattle@solvang.simula.nornet $ cd RUNNABLE/
-     srl_seattle@solvang.simula.nornet $ python repy.py restrictions.test localIPv6.r2py 
-     2001:700:4100:901::b5:69
-     ```
-    This is the IPv6 address for the node "solvang.simula.nornet"    
+  
+```
+srl_seattle@solvang.simula.nornet $ git clone -b ipv6_sandbox_repy https://github.com/ankitbhatia32/repy_v2.git
+Cloning into 'repy_v2'...
+remote: Counting objects: 1918, done.
+Receiving objects: 100% (1918/1918), 1.18 MiB | 273.00 KiB/s, done.
+remote: Total 1918 (delta 0), reused 0 (delta 0), pack-reused 1918
+Resolving deltas: 100% (999/999), done.
+Checking connectivity... done.
+srl_seattle@solvang.simula.nornet $ cd repy_v2/
+srl_seattle@solvang.simula.nornet $ cd scripts/
+srl_seattle@solvang.simula.nornet $ python initialize.py 
+Checking out repo from https://github.com/SeattleTestbed/seattlelib_v2 ...
+Done!
+Checking out repo from https://github.com/SeattleTestbed/portability ...
+Done!
+Checking out repo from https://github.com/SeattleTestbed/seash ...
+Done!
+Checking out repo from https://github.com/SeattleTestbed/affix ...
+Done!
+Checking out repo from https://github.com/SeattleTestbed/common ...
+Done!
+Checking out repo from https://github.com/SeattleTestbed/utf ...
+Done!
+srl_seattle@solvang.simula.nornet $ python build.py 
+Building into /home/srl_seattle/repy_v2/RUNNABLE
+Done building!
+srl_seattle@solvang.simula.nornet $ cd ..
+srl_seattle@solvang.simula.nornet $ cd RUNNABLE/
+srl_seattle@solvang.simula.nornet $ python repy.py restrictions.test localIPv6.r2py 
+2001:700:4100:901::b5:69
+```
+    
+This is the IPv6 address for the node "solvang.simula.nornet"    
 
 
 
