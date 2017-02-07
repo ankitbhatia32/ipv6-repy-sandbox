@@ -4,7 +4,7 @@ Adding IPv6 functionality to the current RepyV2 Sandbox. Enabling extended funct
 ## Introduction
 With the growing need of IP addresses and IPv4 address exhuasting soon, people are shifting to IPv6 addresses in networking. IPv6 with its increasing demand is an essential which can be added to Seattle RepyV2 Sanbox. This will enable users having IPv6 capability can make of Seattle Sandbox.
 
-Newly added emulcomm_ipv6 module and various IPv6 API function call added in the current extention 
+Newly added emulcomm_ipv6 module and various IPv6 API function call added in the current extention. New RepyV2 IPv6 modules are in repy_v2 branch [ipv6_sandbox_repy](https://github.com/ankitbhatia32/repy_v2/tree/ipv6_sandbox_repy), various scripts and newly added emulcomm_ipv6 module is in this branch of the repository.
 
 ## IPv6 Testbed
 To test IPv6 functionality we will be using NorNet testbed. NorNet is wonderful platform which have many nodes having IPv6 capability. NorNet bascially consists of slices, these slices further contains various nodes which may or may not have IPv6 capability. One of the slice is "srl_seattle" which has many nodes having IPv6 capability, choose one of the nodes to work on. 
@@ -24,9 +24,9 @@ Brief overview on how to SSH into NorNet is given below. For in depth details re
 
 2. Access to PLC and Monitor is done via port forwarding:
 
-  Monitor: "http://localhost:2001/"
+  Monitor: 'http://localhost:2001/'
 
-  PLC: "https://localhost:2000/"
+  PLC: 'https://localhost:2000/'
 
 3. After SSH into login server you can choose a slice & node using above PLC link with your gatekeeper username and password credentials.
 
@@ -99,7 +99,8 @@ srl_seattle@solvang.simula.nornet $ python repy.py restrictions.test localIPv6.r
 2001:700:4100:901::b5:69
 ```
     
-This is the IPv6 address for the node "solvang.simula.nornet"    
+This is the IPv6 address for the node "solvang.simula.nornet"
+
 
 
 
