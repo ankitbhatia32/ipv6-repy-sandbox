@@ -16,7 +16,7 @@ This API function is similar to gethostbyname in IPv4. It returns the IPv6 addre
 
  * Doc string:
 	
-	```
+	  ```
 	  """
 	   <Purpose>
 	      Provides information about a hostname. Calls socket.getaddrinfo() instead of socket.gethostbyname().
@@ -38,7 +38,7 @@ This API function is similar to gethostbyname in IPv4. It returns the IPv6 addre
 	   <Returns>
 	     The IPv6 address as a list.
 	  """
-	```
+	  ```
 
 
 ##### getmyip_ipv6()
@@ -46,7 +46,7 @@ Returns the localhost's "Internet facing" IPv6 address. If there are multiple in
 
  * Doc string:
 
-    ```
+      ```
 	  """
 	   <Purpose>
 
@@ -71,7 +71,7 @@ Returns the localhost's "Internet facing" IPv6 address. If there are multiple in
 
 	      The localhost's IPv6 address
 	  """
-	```  
+	  ```  
 
 
 ##### sendmessage_ipv6(destip, destport, message, localip, localport):
@@ -121,7 +121,7 @@ Open a TCP connection to a remote computer, returning a socket object. There is 
 
   *Doc string:
 
-	```
+	    ```
 		"""
 		  <Purpose>
 		    Opens a connection, returning a socket-like object
@@ -180,14 +180,14 @@ Open a TCP connection to a remote computer, returning a socket object. There is 
 		    A socket-like object that can be used for communication. Use send, 
 		    recv, and close just like you would an actual socket object in python.
 		"""
-	```	
+	    ```	
 
 ##### listenforconnection_ipv6(localip, localport)
 Binds to an IP and port and waits for incoming TCP connections. If this function is called multiple times on the same ip and port without the first tcpserversocket being closed, the second call will have an exception. These ports are separate from the message ports and so both a message and connection listener can use the same port. This call raises an exception instead of blocking.
 
   *Doc string:
 
-    ```
+      ```
       """
         <Purpose>
           Sets up a TCPServerSocket to recieve incoming TCP connections. 
@@ -221,6 +221,6 @@ Binds to an IP and port and waits for incoming TCP connections. If this function
         <Returns>
           A TCPServerSocket object.
       """
-    ```    
+      ```    
 
 
