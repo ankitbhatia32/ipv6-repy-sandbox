@@ -49,10 +49,11 @@ To test IPv6 Implementation make sure you have Python 2 and git installed on you
 
 2. Now intitialize and build the cloned repy_v2 by navigating into the scripts directory. This is shown as follows:
     
-    ```cd repy_v2```
-    ```cd scripts```
-    ```python initialize.py```
-    ```python build.py```
+    ```$ cd repy_v2
+       $ cd scripts
+       $ python initialize.py
+       $ python build.py
+    ```
 
    Refer this [link](https://seattle.poly.edu/wiki/RepyV2Tutorial) for complete details and if you are new to seattle.
 
