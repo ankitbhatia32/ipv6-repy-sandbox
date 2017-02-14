@@ -3,6 +3,8 @@ This document describes the narrow IPv6 API available to repy programs. This doc
 
 The intent is that we will build libraries that will provide 'rich' functionality on top of these abstractions. For example, the file-like objects don't support next, but we can build this in a library. Also, notice that the logging mechanism doesn't support multiple arguments / do type conversion. We can do this in a user level library. We will expect that all users will load this library (and may even do it for them).
 
+For IPv4 Repy_V2 API function library, refer this [link](https://github.com/SeattleTestbed/docs/blob/master/Programming/RepyV2API.md)
+
 ## Detailed Description
 
 ### API functions
@@ -42,7 +44,8 @@ This API function is similar to gethostbyname in IPv4. It returns the IPv6 addre
 ##### getmyip_ipv6()
 Returns the localhost's "Internet facing" IPv6 address. If there are multiple interfaces, this IP will be on the interface that will be used by default to handle traffic to Internet hosts. Note that if the node is behind a NAT or similar, this may be a private IP. It may raise an exception on hosts that are not connected to the Internet.
 
- * Doc string:   
+ * Doc string:
+
     ```
 	  """
 	   <Purpose>
@@ -74,47 +77,50 @@ Returns the localhost's "Internet facing" IPv6 address. If there are multiple in
 ##### sendmessage_ipv6(destip, destport, message, localip, localport):
 Sends a UDP message to a destination host / port using a specified local IPv6 address and localport. Returns the number of bytes sent.
 
- * Doc string:   
+ * Doc string:
+
     ```
-	    """
-   <Purpose>
+	"""
+     <Purpose>
 
-      Send a message to a host / port
+       Send a message to a host / port
 
-   <Arguments>
+     <Arguments>
 
-      destip:
-         The IPv6 address to send the message to
-      destport:
-         The port to send the message to
-      message:
-         The message to send
-      localip:
-         The local IPv6 address to send the message from 
-      localport:
-         The local port to send the message from
+       destip:
+          The IPv6 address to send the message to
+       destport:
+          The port to send the message to
+       message:
+          The message to send
+       localip:
+          The local IPv6 address to send the message from 
+       localport:
+          The local port to send the message from
 
-   <Exceptions>
-      AddressBindingError (descends NetworkError) when the local IP isn't
-        a local IP.
+     <Exceptions>
+       AddressBindingError (descends NetworkError) when the local IP isn't
+       a local IP.
 
-      ResourceForbiddenError (descends ResourceException?) when the local
-        port isn't allowed
+       ResourceForbiddenError (descends ResourceException?) when the local
+       port isn't allowed
 
-      RepyArgumentError when the local IP and port aren't valid types
-        or values
+       RepyArgumentError when the local IP and port aren't valid types
+       or values
 
-      AlreadyListeningError if there is an existing listening UDP socket
-      on the same local IP and port.
+       AlreadyListeningError if there is an existing listening UDP socket
+       on the same local IP and port.
 
-      DuplicateTupleError if there is another sendmessage on the same
-      local IP and port to the same remote host.
+       DuplicateTupleError if there is another sendmessage on the same
+       local IP and port to the same remote host.
+    """
 	``` 
 
 ##### openconnection_ipv6(destip, destport, localip, localport, timeout)
 Open a TCP connection to a remote computer, returning a socket object. There is a timeout value that can be set to limit the amount of time the system will wait for a response before abandoning the attempt to connect.
 
-  *Doc string:	
+  *Doc string:
+
 	```
 		"""
 		  <Purpose>
@@ -175,5 +181,46 @@ Open a TCP connection to a remote computer, returning a socket object. There is 
 		    recv, and close just like you would an actual socket object in python.
 		"""
 	```	
+
+##### listenforconnection_ipv6(localip, localport)
+Binds to an IP and port and waits for incoming TCP connections. If this function is called multiple times on the same ip and port without the first tcpserversocket being closed, the second call will have an exception. These ports are separate from the message ports and so both a message and connection listener can use the same port. This call raises an exception instead of blocking.
+
+  *Doc string:
+
+    ```
+      """
+        <Purpose>
+          Sets up a TCPServerSocket to recieve incoming TCP connections. 
+
+        <Arguments>
+          localip:
+            The local IP to listen on
+          localport:
+            The local port to listen on
+
+        <Exceptions>
+          Raises AlreadyListeningError if another TCPServerSocket or process has bound
+          to the provided localip and localport.
+
+          Raises DuplicateTupleError if another process has bound to the
+          provided localip and localport.
+
+          Raises RepyArgumentError if the localip or localport are invalid
+
+          Raises ResourceForbiddenError if the ip or port is not allowed.
+
+          Raises AddressBindingError if the IP address isn't a local ip.
+
+        <Side Effects>
+          The IP / Port combination cannot be used until the TCPServerSocket
+          is closed.
+
+        <Resource Consumption>
+          Uses an insocket for the TCPServerSocket.
+
+        <Returns>
+          A TCPServerSocket object.
+      """
+    ```    
 
 
