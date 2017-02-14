@@ -13,6 +13,7 @@ The intent is that we will build libraries that will provide 'rich' functionalit
 This API function is similar to gethostbyname in IPv4. It returns the IPv6 address of the host in string format in a list
 
  * Doc string:
+	
 	```
 	  """
 	   <Purpose>
@@ -112,7 +113,8 @@ Sends a UDP message to a destination host / port using a specified local IPv6 ad
 
 ##### openconnection_ipv6(destip, destport, localip, localport, timeout)
 Open a TCP connection to a remote computer, returning a socket object. There is a timeout value that can be set to limit the amount of time the system will wait for a response before abandoning the attempt to connect.
-	
+
+  *Doc string:	
 	```
 		"""
 		  <Purpose>
