@@ -119,7 +119,7 @@ Sends a UDP message to a destination host / port using a specified local IPv6 ad
 ##### openconnection_ipv6(destip, destport, localip, localport, timeout)
 Open a TCP connection to a remote computer, returning a socket object. There is a timeout value that can be set to limit the amount of time the system will wait for a response before abandoning the attempt to connect.
 
-  *Doc string:
+  * Doc string:
 
 	    ```
 		"""
@@ -185,7 +185,7 @@ Open a TCP connection to a remote computer, returning a socket object. There is 
 ##### listenforconnection_ipv6(localip, localport)
 Binds to an IP and port and waits for incoming TCP connections. If this function is called multiple times on the same ip and port without the first tcpserversocket being closed, the second call will have an exception. These ports are separate from the message ports and so both a message and connection listener can use the same port. This call raises an exception instead of blocking.
 
-  *Doc string:
+  * Doc string:
 
       ```
       """
@@ -222,5 +222,49 @@ Binds to an IP and port and waits for incoming TCP connections. If this function
           A TCPServerSocket object.
       """
       ```    
+
+##### listenformessage_ipv6(localip, localport)
+Binds to an IPv6 address and port and waits for incoming UDP messages. If this function is called multiple times on the same ip and port without the first udpserversocket being closed, the second call will have an exception. These ports are separate from the connection ports and so both a message and connection listener can use the same port. This call will raise an exception if it would block.
+
+ * Doc string:
+
+    ```
+    """
+        <Purpose>
+          Sets up a UDPServerSocket to receive incoming UDP messages.
+
+        <Arguments>
+          localip:
+            The local IP to register the handler on.
+          localport:
+            The port to listen on.
+
+        <Exceptions>
+          DuplicateTupleError (descends NetworkError) if the port cannot be
+          listened on because some other process on the system is listening on
+          it.
+
+          AlreadyListeningError if there is already a UDPServerSocket with the same
+          IP and port.
+
+          RepyArgumentError if the port number or ip is wrong type or obviously
+          invalid.
+
+          AddressBindingError (descends NetworkError) if the IP address isn't a
+          local IP.
+
+          ResourceForbiddenError if the port is not allowed.
+
+        <Side Effects>
+          Prevents other UDPServerSockets from using this port / IPv6 address
+
+        <Resource Consumption>
+          This operation consumes an insocket and requires that the provided messport is allowed.
+
+        <Returns>
+          The UDPServerSocket.
+    """
+    ```  
+
 
 
