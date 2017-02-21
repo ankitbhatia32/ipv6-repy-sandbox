@@ -33,3 +33,6 @@ Repy_v2 IPv6 implementation is somewhat different than IPv4 implementation. Let 
   Note: If you use this IPv6 implementation and you come across an error like the following:
                            ```ValueError: too many values to unpack```     
         This means that IPv6 implementation is returning four element tuple. You should debug that by taking the first two elements of the returned tuple, performing similar to [this](https://github.com/ankitbhatia32/repy_v2/blob/ipv6_sandbox_repy/emulcomm_ipv6.py#L2039)
+
+  5. Similar to Repy_V2 IPv4 implementation, stable IPv6 address has also been added to the repy_contants.py module, these perform similar function as IPv4, the attempt to connect to these IPv6 addresses, and then check our local IPv6 These addresses were choosen since are very stable. These are represented [here](https://github.com/ankitbhatia32/repy_v2/blob/ipv6_sandbox_repy/repy_constants.py#L53-L57)
+      
