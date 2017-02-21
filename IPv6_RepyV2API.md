@@ -266,5 +266,7 @@ Binds to an IPv6 address and port and waits for incoming UDP messages. If this f
     """
     ```  
 
+Note: This documentation points mainly to IPv6 implementation of repy_v2. These API functions are different from the already implemented IPv4 repy_v2, rest of them are usually the same as given [here](https://github.com/ankitbhatia32/docs/blob/master/Programming/RepyV2API.md). More API functions may be added as more refinement of documentation is done.
+
 
 
