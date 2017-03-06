@@ -1,8 +1,6 @@
 # IPv6 Repy V2 Library Reference
 This document describes the narrow IPv6 API available to repy programs. This document includes all of the calls that are available to a repy program and the use and meaning of these calls. For items built into the python programming language (like list operations, etc.) see the appropriate Python documentation.
 
-The intent is that we will build libraries that will provide 'rich' functionality on top of these abstractions. For example, the file-like objects don't support next, but we can build this in a library. Also, notice that the logging mechanism doesn't support multiple arguments / do type conversion. We can do this in a user level library. We will expect that all users will load this library (and may even do it for them).
-
 For IPv4 Repy_V2 API function library, refer this [link](https://github.com/SeattleTestbed/docs/blob/master/Programming/RepyV2API.md)
 
 ## Detailed Description
