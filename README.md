@@ -11,8 +11,8 @@ To test IPv6 functionality we will be using NorNet testbed. NorNet is wonderful 
 
 Brief overview on how to SSH into NorNet is given below. For in depth details refer the [link](https://www.simula.no/file/simulasimula2130pdf/download)
 
-###SSH into NorNet
-1. First of all you need Secure Shell(SSH) access to the login server of the NorNet test bed. For this you need a gatekeeper NorNet Username and Password. Using your Username and Password SSH into login server with following command:
+### SSH into NorNet
+  1. First of all you need Secure Shell(SSH) access to the login server of the NorNet test bed. For this you need a gatekeeper NorNet Username and Password. Using your Username and Password SSH into login server with following command:
 
   ```ssh <username>@gatekeeper.nntb.no```
 
@@ -22,21 +22,21 @@ Brief overview on how to SSH into NorNet is given below. For in depth details re
 
   This forwards TCP port 2000 to PLC server's HTTPS port and forwards TCP port 2001 to Monitor server's HTTP port
 
-2. Access to PLC and Monitor is done via port forwarding:
+  2. Access to PLC and Monitor is done via port forwarding:
 
   Monitor: 'http://localhost:2001/'
 
   PLC: 'https://localhost:2000/'
 
-3. After SSH into login server you can choose a slice & node using above PLC link with your gatekeeper username and password credentials.
+  3. After SSH into login server you can choose a slice & node using above PLC link with your gatekeeper username and password credentials.
 
-4. In order to gain access to one of the nodes of the NorNet, follow the following steps:
+  4. In order to gain access to one of the nodes of the NorNet, follow the following steps:
 
-  1. Choose one of the slice on NorNet for example "srl_seattle"
-  2. Choose a node from that slice on which you want work on. Please choose the one which has IPv6 support. For example "solvang.simula.nornet"
-  3. Once in the NorNet core, use the following command to SSH into a slice and its corresponding node:
+    1. Choose one of the slice on NorNet for example "srl_seattle"
+    2. Choose a node from that slice on which you want work on. Please choose the one which has IPv6 support. For example "solvang.simula.nornet"
+    3. Once in the NorNet core, use the following command to SSH into a slice and its corresponding node:
 
-    ```ssh -i <your private key> <slice name>@<node name>```
+      ```ssh -i <your private key> <slice name>@<node name>```
 
 Note: In testbeds like NorNet the nodes/machines get reinsatlled more often and because of this, expect your progress to be washed away after sometime. It would be wise keep your progress up to date on github. 
 
