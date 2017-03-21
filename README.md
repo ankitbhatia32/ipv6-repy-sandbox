@@ -4,7 +4,7 @@ Adding IPv6 functionality to the current RepyV2 Sandbox. Enabling extended funct
 ## Introduction
 With the growing need of IP addresses and IPv4 address exhuasting soon, people are shifting to IPv6 addresses in networking. IPv6 with its increasing demand is an essential which can be added to Seattle RepyV2 Sanbox. This will enable users having IPv6 capability can make of Seattle Sandbox.
 
-Newly added emulcomm_ipv6 module and various IPv6 API function call added in the current extention. New RepyV2 IPv6 modules are in repy_v2 branch [ipv6_sandbox_repy](https://github.com/ankitbhatia32/repy_v2/tree/ipv6_sandbox_repy), various scripts and newly added emulcomm_ipv6 module is in this branch of the repository.
+Newly added emulcomm_ipv6 module and various IPv6 API function call added in the current extention. New RepyV2 IPv6 modules are in repy_v2 branch [ipv6_sandbox_repy](https://github.com/ankitbhatia32/repy_v2/tree/ipv6_sandbox_repy), various scripts and newly added emulcomm_ipv6 module is in this branch of the Repy_V2 repository.
 
 ## IPv6 Testbed
 To test IPv6 functionality we will be using NorNet testbed. NorNet is wonderful platform which have many nodes having IPv6 capability. NorNet bascially consists of slices, these slices further contains various nodes which may or may not have IPv6 capability. One of the slice is "srl_seattle" which has many nodes having IPv6 capability, choose one of the nodes to work on. 
@@ -43,21 +43,22 @@ Note: In testbeds like NorNet the nodes/machines get reinsatlled more often and 
 ## Basic Operation
 To test IPv6 Implementation make sure you have Python 2 and git installed on your Linux machine. Make sure it has IPv6 capability. Lets follows certain steps to the functionality.
 
-1. Clone branch "ipv6_sandbox_repy" from my forked [repy_v2 repository](https://github.com/ankitbhatia32/repy_v2) . You can clone it using the command:
+  1. Clone branch "ipv6_sandbox_repy" from my forked [repy_v2 repository](https://github.com/ankitbhatia32/repy_v2) . You can clone it   using the command:
 
   ```git clone -b ipv6_sandbox_repy https://github.com/ankitbhatia32/repy_v2.git```
 
-2. Now intitialize and build the cloned repy_v2 by navigating into the scripts directory. This is shown as follows:
+  2. Now intitialize and build the cloned repy_v2 by navigating into the scripts directory. This is shown as follows:
     
-    ```$ cd repy_v2```
-    ```$ cd scripts```
-    ```$ python initialize.py```
-    ```$ python build.py```
-  
+         ``` 
+             $ cd repy_v2
+             $ cd scripts
+             $ python initialize.py
+             $ python build.py 
+         ```                  
+         
+     Refer this [link](https://seattle.poly.edu/wiki/RepyV2Tutorial) for complete details and if you are new to seattle.
 
-   Refer this [link](https://seattle.poly.edu/wiki/RepyV2Tutorial) for complete details and if you are new to seattle.
-
-3. After building and intializing navigate to RUNNABLE directory. You will find that this directory will have all the desired files to run repy sandbox. Especially newly added emulcomm_ipv6.py module. Now lets try an example to test our implementation.
+  3. After building and intializing navigate to RUNNABLE directory. You will find that this directory will have all the desired files to run repy sandbox. Especially newly added emulcomm_ipv6.py module. Now lets try an example to test our implementation.
 
 ### Example
 In this example we will run our implementation to find the local IPv6 address of the NorNet node. Follow the following steps:
