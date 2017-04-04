@@ -14,19 +14,19 @@ Brief overview on how to SSH into NorNet is given below. For in depth details re
 ### SSH into NorNet
   1. First of all you need Secure Shell(SSH) access to the login server of the NorNet test bed. For this you need a gatekeeper NorNet Username and Password. Using your Username and Password SSH into login server with following command:
 
-  ```ssh <username>@gatekeeper.nntb.no```
+      ```ssh <username>@gatekeeper.nntb.no```
 
   Use port forwarding to access PLC and Monitor servers:
 
-  ```ssh <username>@gatekeeper.nntb.no -L 2000:plc.simula.nornet:443 -L 2001:monitor.simula.nornet:80```
+      ```ssh <username>@gatekeeper.nntb.no -L 2000:plc.simula.nornet:443 -L 2001:monitor.simula.nornet:80```
 
   This forwards TCP port 2000 to PLC server's HTTPS port and forwards TCP port 2001 to Monitor server's HTTP port
 
   2. Access to PLC and Monitor is done via port forwarding:
 
-  Monitor: 'http://localhost:2001/'
+      Monitor: 'http://localhost:2001/'
 
-  PLC: 'https://localhost:2000/'
+      PLC: 'https://localhost:2000/'
 
   3. After SSH into login server you can choose a slice & node using above PLC link with your gatekeeper username and password credentials.
 
@@ -45,7 +45,7 @@ To test IPv6 Implementation make sure you have Python 2 and git installed on you
 
   1. Clone branch "ipv6_sandbox_repy" from my forked [repy_v2 repository](https://github.com/ankitbhatia32/repy_v2) . You can clone it   using the command:
 
-  ```git clone -b ipv6_sandbox_repy https://github.com/ankitbhatia32/repy_v2.git```
+      ```git clone -b ipv6_sandbox_repy https://github.com/ankitbhatia32/repy_v2.git```
 
   2. Now intitialize and build the cloned repy_v2 by navigating into the scripts directory. This is shown as follows:
     
