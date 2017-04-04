@@ -32,11 +32,11 @@ Brief overview on how to SSH into NorNet is given below. For in depth details re
 
   4. In order to gain access to one of the nodes of the NorNet, follow the following steps:
 
-    1. Choose one of the slice on NorNet for example "srl_seattle"
-    2. Choose a node from that slice on which you want work on. Please choose the one which has IPv6 support. For example              "solvang.simula.nornet"
-    3. Once in the NorNet core, use the following command to SSH into a slice and its corresponding node
+      1. Choose one of the slice on NorNet for example "srl_seattle"
+      2. Choose a node from that slice on which you want work on. Please choose the one which has IPv6 support. For example              "solvang.simula.nornet"
+      3. Once in the NorNet core, use the following command to SSH into a slice and its corresponding node
     
-          ```ssh -i <your private key> <slice name>@<node name>```
+            ```ssh -i <your private key> <slice name>@<node name>```
 
 Note: In testbeds like NorNet the nodes/machines get reinsatlled more often and because of this, expect your progress to be washed away after sometime. It would be wise keep your progress up to date on github. 
 
